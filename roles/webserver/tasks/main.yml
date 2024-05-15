@@ -1,6 +1,4 @@
 ---
-# tasks file for webserver
----
 - name: install apache
   become: true
   ansible.builtin.yum:
@@ -16,13 +14,13 @@
 - name: clone a repo
   become: true
   ansible.builtin.git:
-    repo: https://github.com/IBK-DevOPs/tooling.git
+    repo: https://github.com/IBK-Dev/tooling.git
     dest: /var/www/html
     force: yes
 
 - name: copy html content to one level up
   become: true
-  command: cp -r /var/www/html/html/ /var/www/
+  command: cp -r /var/www/html/html/ /var/www
 
 - name: Start service httpd, if not started
   become: true
