@@ -61,4 +61,6 @@ apache_restart_state: restarted
 # if you want to upgrade or switch versions using a new repo.
 apache_packages_state: present
 
-
+webserver
+web1: "172.31.29.78 weight=3"
+web2: "172.31.26.30 weight=3"
