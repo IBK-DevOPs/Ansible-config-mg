@@ -61,6 +61,11 @@ apache_restart_state: restarted
 # if you want to upgrade or switch versions using a new repo.
 apache_packages_state: present
 
-webserver
-web1: "172.31.29.78 weight=3"
-web2: "172.31.26.30 weight=3"
+#webservers
+loadbalancer_name: "myapp1"
+ip-172-31-29-78.us-east-2.compute.internal: "172.31.29.78 weight=3"
+ip-172-31-26-30.us-east-2.compute.internal: "172.31.26.30 weight=3"
+
+enable_apache_lb: false
+load_balance_is_required: false
+

@@ -15,6 +15,3 @@
       tags:
         - always
 
-
-enable_nginx_lb: true
-load_balancer_is_required: true
